@@ -1,0 +1,164 @@
+.section{
+    width: 100%;
+    height: auto;
+    background-color: #19161C;
+    padding: 20px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.inside{
+    width: 60%;
+    height: 100%;
+}
+
+.top{
+    width: 100%;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.title{
+    color: white;
+    font-size: 26px;
+    font-family: sans-serif;
+    font-weight: bold;
+}
+
+.specialText{
+    color: #F8E4BE;
+}
+
+.bottom{
+    width: 100%;
+    height: auto;
+    display: flex;
+}
+
+.left{
+    width: 40%;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    padding-top: 20px;
+}
+
+.head{
+    font-size: 25px;
+    color: white;
+    font-family: sans-serif;
+    font-weight: bold;
+}
+
+.text{
+    font-size: 20px;
+    color: white;
+    font-family: sans-serif;
+}
+
+.right{
+    width: 60%;
+    padding-top: 20px;
+    height: 300px;
+}
+
+form{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    flex-direction: column;
+}
+
+.inputs,.btn{
+    max-width: 370px;
+    min-width: 150px;
+    width: 60%;
+    height: 45px;
+    background-color: #19161C;
+    border: 1px solid #585858;
+    border-radius: 12px;
+    color: white;
+    text-align: center;
+}
+
+.btn{
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: .2s;
+}
+
+.btn:hover{
+    font-size: 15px;
+}
+
+.btn:active{
+    transition: 0s;
+    transform: scale(0.9);
+}
+
+.inputs:focus{
+    border: 1px solid white;
+}
+
+@media screen and (max-width: 1200px){
+    .inside{
+        width: 80%;
+    }
+}
+
+@media screen and (max-width: 900px){
+
+    .title{
+        text-align: center;
+    }
+    .bottom{
+        flex-direction: column;
+    }
+
+    .left,.right{
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        height: 250px;
+    }
+
+    .left{
+        gap: 5px;
+    }
+
+    .head,.text{
+        text-align: center;
+    }
+
+    .head{
+        font-size: 22px;
+    }
+
+    .inputs,.btn{
+        max-width: 90%;
+        min-width: 150px;
+        width: 80%;
+    }
+
+    .inside{
+        width: 90%;
+    }
+}
+
+@media screen and (max-width: 500px){
+    .inside{
+        width: 95%;
+    }
+
+    .inputs,.btn{
+        width: 90%;
+    }
+}

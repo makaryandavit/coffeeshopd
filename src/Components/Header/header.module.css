@@ -1,0 +1,152 @@
+.header{
+    width: 100%;
+    height: 100vh;
+    background-image: url(../../assets/background.png);
+    background-size: cover;
+    background-position: center;
+}
+
+.navigation{
+    width: 100%;
+    height: 10vh;
+    display: flex;
+    
+}
+
+.navFix{
+    position: fixed;
+    top: 0;
+    background-color: black;
+    z-index: 1500;
+    transform: translateY(-120%);
+    animation: 1s comeHeader .5s forwards;
+}
+
+
+@keyframes comeHeader{
+    from{
+        position: fixed;
+        top: 0;
+        background-color: black;
+        z-index: 1500;
+        transform: translateY(-120%);
+    }
+    to{
+        position: fixed;
+        top: 0;
+        background-color: black;
+        z-index: 1500;
+        transform: translateY(0%);
+    }
+}
+
+.naviagateLeft{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo{
+    width: 30%;
+}
+
+.naviagateRight{
+    width: 50%;
+    height: 100%;
+}   
+
+.lists{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 35px;
+}
+
+.link{
+    font-size: 17px;
+    font-family: sans-serif;
+    color: #848895;
+    transition: .3s;
+}
+
+.link3{
+    background: -webkit-linear-gradient(#F2DE8A, #BF8836);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+
+.link:hover{
+    font-size: 22px;
+}
+
+.btn{
+    width: 300px;
+    height: 40px;
+    background-color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 24px;
+    position: absolute;
+    bottom: 3%;
+    left: 50%;
+    transform: translateX(-50%);
+    animation: .5s pulse infinite alternate;
+    cursor: pointer;
+}
+
+.btn > a{
+    color: white;
+    font-size: 17px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+@keyframes pulse{
+    from{
+        transform: translateX(-50%) scale(1.0);
+    }
+    to{
+        transform: translateX(-50%) scale(0.9);
+    }
+}
+
+@media screen and (max-width: 800px){
+    .naviagateRight{
+        display: none;
+    }
+
+    .naviagateLeft{
+        width: 100%;
+        height: 10vh;
+    }
+}
+
+@media screen and (max-width: 500px){
+
+    .navigation{
+        height: 12vh;
+    }
+
+    .naviagateLeft > .logo{
+        width: 60%;
+    }
+
+    .logo{
+        width: 80%;
+        transform: translateY(25%);
+    }
+
+    .header{
+        background-image: url(../../assets/backMobile.png);
+        background-position: 52%;
+    }
+
+    .btn{
+        height: 50px;
+    }
+}
